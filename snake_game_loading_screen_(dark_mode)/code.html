@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SNAKE - Loading...</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#38fa38",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#050a05",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            background-color: #050a05;
+            margin: 0;
+            overflow: hidden;
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(56, 250, 56, 0.7), 0 0 20px rgba(56, 250, 56, 0.5), 0 0 30px rgba(56, 250, 56, 0.3);
+        }
+        .neon-box {
+            box-shadow: 0 0 15px rgba(56, 250, 56, 0.6);
+        }
+        .bg-gradient-radial {
+            background: radial-gradient(circle at center, #0f230f 0%, #050a05 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center bg-gradient-radial overflow-hidden">
+<!-- Top Navigation Bar Overlay -->
+<div class="absolute top-0 w-full max-w-[1200px] px-6 py-4 flex items-center justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-primary text-sm font-bold tracking-[0.2em]">SNAKE // OS</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-2 text-primary/60 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 text-primary/60 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+<!-- Central Loading Content -->
+<div class="flex flex-col items-center gap-12 w-full max-w-md px-10">
+<!-- Logo Section -->
+<div class="relative">
+<!-- Outer glow circle for background depth -->
+<div class="absolute inset-0 blur-3xl bg-primary/10 rounded-full scale-150"></div>
+<h1 class="text-primary text-7xl md:text-9xl font-extrabold tracking-widest neon-text transition-opacity duration-1000">
+                    SNAKE
+                </h1>
+</div>
+<!-- Progress Section -->
+<div class="w-full space-y-4">
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-primary/60 text-[10px] font-bold tracking-[0.3em] uppercase">Status</span>
+<p class="text-primary text-xs font-medium tracking-[0.1em] font-mono">LOADING ASSETS...</p>
+</div>
+<span class="text-primary text-sm font-bold font-mono">65%</span>
+</div>
+<!-- Progress Bar Container -->
+<div class="h-1.5 w-full bg-primary/10 rounded-full overflow-hidden border border-primary/20">
+<div class="h-full bg-primary neon-box rounded-full" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<p class="text-primary/40 text-[9px] font-medium tracking-tighter uppercase">v1.0.4 // SYSTEM INITIALIZED</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[14px] text-primary/40">sensors</span>
+<span class="material-symbols-outlined text-[14px] text-primary/40">memory</span>
+<span class="material-symbols-outlined text-[14px] text-primary/40">terminal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Footer Navigation Style -->
+<div class="absolute bottom-10 flex gap-8">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">vibration</span>
+<span class="text-[8px] text-primary/30 group-hover:text-primary/60 tracking-widest uppercase">Haptic</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">info</span>
+<span class="text-[8px] text-primary/30 group-hover:text-primary/60 tracking-widest uppercase">Guide</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">help</span>
+<span class="text-[8px] text-primary/30 group-hover:text-primary/60 tracking-widest uppercase">FAQ</span>
+</button>
+</div>
+<!-- Decorative UI Elements (Scanner lines/grid) -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.03] overflow-hidden">
+<div class="h-full w-full" style="background-image: linear-gradient(0deg, transparent 24%, rgba(56, 250, 56, .5) 25%, rgba(56, 250, 56, .5) 26%, transparent 27%, transparent 74%, rgba(56, 250, 56, .5) 75%, rgba(56, 250, 56, .5) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(56, 250, 56, .5) 25%, rgba(56, 250, 56, .5) 26%, transparent 27%, transparent 74%, rgba(56, 250, 56, .5) 75%, rgba(56, 250, 56, .5) 76%, transparent 77%, transparent); background-size: 50px 50px;"></div>
+</div>
+<!-- Scanline Effect -->
+<div class="absolute inset-0 pointer-events-none opacity-5" style="background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%;">
+</div>
+</div>
+</body></html>
